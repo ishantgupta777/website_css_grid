@@ -1,0 +1,222 @@
+:root{
+    --box-color: #ddd;
+    --bg-color: #ccc;
+    --text-on-image: #fff;
+    --button-color:#333;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    background: var(--bg-color);
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+}
+#container{
+    display: grid;
+    grid-template: 1fr / 1fr;
+    width: 90%;
+    margin: auto;
+}
+header{
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+    grid-gap: 1em;
+    width: 100%;
+}
+nav > div{
+    background: var(--box-color);
+    text-align: center;
+    height: 50px;
+    font-size: 23px;
+    font-weight: 500;
+    display: table;
+    box-shadow: var(--shadow);
+}
+a{
+    text-decoration: none;
+    color: var(--button-color);
+    display: table-cell;
+    vertical-align: middle;
+}
+section#main1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-gap: 1em;
+    margin-top: 3em;
+}
+#image{
+    grid-column: span 3;
+    grid-row: span 2;
+}
+.services{
+    text-align: center;
+    grid-column: span 1;
+    grid-column-start: 4;
+    padding-bottom: 70px;
+    min-width: 200px;
+}
+section#main1 > div{
+    background-color: var(--box-color);
+    box-shadow: var(--shadow);
+}
+#image{
+    background-image: url(https://image.ibb.co/kYJK8x/showcase.jpg);
+    object-fit: cover;
+    object-position: center;
+    color: var(--text-on-image);
+    height: 100%;
+    display: table;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    font-weight: 600;
+    padding-top: 20px;
+}
+#image p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: var(--box-color);
+    width : 70%;
+    margin-top: 10px;
+    
+}
+div#pbox{
+    margin : auto auto;
+    vertical-align: middle;
+    display: table-cell;
+    padding-left: 2em;
+}
+button{
+    display: block;
+    margin-top: 2em;
+    border: none;
+    color: white;
+    background-color: var(--button-color);
+    font-size: 100%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.services h5{
+    font-size: 20px;
+    margin: 20px auto 0 auto;
+    padding-top: 20px;
+}
+.services p{
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 0.8em;
+    vertical-align: middle;
+}
+.services button{
+    width: 40%;
+    margin: auto;
+    margin-top: 1em;
+}
+section#main2{
+    margin: 50px auto 100px auto; 
+    text-align: center;
+    width: 100%;
+}
+div#boxes{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    grid-gap: 1em;
+}
+.box{
+    background: var(--box-color);
+    box-shadow: var(--shadow);
+}
+section#main2 .box i{
+    margin: 30px auto;
+} 
+section#main2 h3{
+    font-size: 140%;
+}
+section#main2 p{
+    font-size: 16px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+section#about{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+    grid-gap: 1em;
+    background: var(--box-color);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+section#about img{
+    width: 90%;
+    margin: 50px;
+}
+section#about #info{
+    margin : 50px auto;
+}
+section#about p{
+    width : 80%;
+    font size: 20px;
+}
+section#about h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+section.portfolio img{
+    display: inline-block;
+    margin: 25px auto;
+}
+section.portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+footer{
+    text-align: center;
+    height: 6vh;
+    background: var(--button-color);
+    color: var(--text-on-image);
+    margin: 25px auto;
+    width: 100%;
+    font-size: 20px;
+    padding-top: 40px;
+}
+
+@media (max-width:1304px){
+    #image{
+        grid-column: 1/-1;
+        height: 60vh;
+    }
+    .services{
+        grid-row: 3 / 4;
+    }
+    .services1{
+        grid-column-start: 1;
+    }
+    .services2{
+        grid-column-start: 2;
+    }
+    #info> h3{
+        font-size: 25px;
+        margin-left: 20px;
+    }
+    #info p, #info button{
+        margin-left: 20px;
+    }
+}
